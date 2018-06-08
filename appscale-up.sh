@@ -11,7 +11,7 @@ set PASSWORD [lindex $argv 1]
 # "appscale up" looks for AppScalefile in current dir, and AppScalefile is created in home dir
 cd ~
 
-spawn /var/lib/appscale-tools/bin/appscale up
+spawn /usr/local/bin/appscale up
 
 expect "Enter your desired admin e-mail address:"
 send -- "$EMAIL\n"

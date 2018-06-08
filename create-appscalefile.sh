@@ -15,19 +15,18 @@ while [[ $# > 0 ]]
 do
     if [ $1 == "-master" ] 
     then
-        echo "  master : $2" >> $FILE
-        shift
+        echo "  - roles: master" >> $FILE
     elif [ $1 == "-appengine" ] 
     then
-        echo "  appengine:" >> $FILE
+        echo "  - roles: compute" >> $FILE
     elif [ $1 == "-database" ] 
     then
-        echo "  database:" >> $FILE
+        echo "  - roles: database" >> $FILE
     elif [ $1 == "-zookeeper" ] 
     then
-        echo "  zookeeper:" >> $FILE        
+        echo "  - roles: zookeeper" >> $FILE        
     else
-        echo "   - $1" >> $FILE
+        echo "    nodes: $1" >> $FILE
     fi 
     shift
 done
